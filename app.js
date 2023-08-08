@@ -78,8 +78,8 @@ const sectionCenter = document.querySelector(".section-center");
 
 window.addEventListener("DOMContentLoaded",function() {
   let displayMenu = menu.map(function() {
-    console.log(item);
-    return item;
+    // console.log(item);
+    return "<h1>hello world</h1>";
   });
-  console.log(displayMenu);
+  // console.log(displayMenu);
 });
