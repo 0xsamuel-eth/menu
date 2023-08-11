@@ -84,7 +84,6 @@ const menu = [
 
 const sectionCenter = document.querySelector(".section-center");
 const container = document.querySelector(".btn-container");
-const filterBtns = document.querySelectorAll(".filter-btn");
 
 // load items
 window.addEventListener("DOMContentLoaded",function() {
@@ -105,7 +104,7 @@ window.addEventListener("DOMContentLoaded",function() {
   })
   .join("");
   container.innerHTML = categoryBtns;
-});
+  const filterBtns = document.querySelectorAll(".filter-btn");
 // filter items
 filterBtns.forEach(function(btn) {
   btn.addEventListener("click", function(e) {
@@ -124,6 +123,7 @@ filterBtns.forEach(function(btn) {
       displayMenuItems(menuCategory)
     }
   });
+});
 });
 
 function displayMenuItems(menuItems) {
