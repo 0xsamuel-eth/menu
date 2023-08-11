@@ -1,3 +1,3 @@
 # Menu Project
 
-A menu project with full menu prices and items
+A  full restaurant menu complete with menu items, prices, descriptions, and pictures that can be sorted by Breakfast, Lunch, Dinner, or Shakes
