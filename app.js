@@ -131,23 +131,23 @@ function displayMenuButtons() {
   .join("");
   container.innerHTML = categoryBtns;
   const filterBtns = document.querySelectorAll(".filter-btn");
-// filter items
-filterBtns.forEach(function(btn) {
-  btn.addEventListener("click", function(e) {
-    const category = e.currentTarget.dataset.id;
-    const menuCategory = menu.filter(function(menuItem) {
-      // console.log(menuItem.category);
-      if(menuItem.category === category) {
-        return menuItem;
+  // filter items
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter(function(menuItem) {
+        // console.log(menuItem.category);
+        if(menuItem.category === category) {
+          return menuItem;
+        }
+      });
+      // console.log(menuCategory);
+      if(category === "all") {
+        displayMenuItems(menu);
+      }
+      else {
+        displayMenuItems(menuCategory)
       }
     });
-    // console.log(menuCategory);
-    if(category === "all") {
-      displayMenuItems(menu);
-    }
-    else {
-      displayMenuItems(menuCategory)
-    }
   });
-});
 };
